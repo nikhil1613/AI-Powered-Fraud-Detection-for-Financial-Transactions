@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}Transaction History{% endblock %}
+
+{% block content %}
+{% include "header2.html" %}
+<section>
+<div class="f-container">
+    <div>
+        <h2>Real-Time Data</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No.</th>
+                    <th>Date</th>
+                    <th>Transaction ID</th>
+                    <th>Account ID</th>
+                    <th>Day of Week</th>
+                    <th>Time</th>
+                    <th>Type of Card</th>
+                    <th>Entry Mode</th>
+                    <th>Amount</th>
+                    <th>Type of Transaction</th>
+                    <th>Merchant Group</th>
+                    <th>Country of Transaction</th>
+                    <th>Country of Residence</th>
+                    <th>Bank</th>
+                    <th>Prediction</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr class="{% if row[14] == 1 %}highlight{% endif %}">
+                    <td>{{ loop.index }}</td>  
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                    <td>{{ row[7] }}</td>
+                    <td>{{ row[8] }}</td>
+                    <td>{{ row[9] }}</td>
+                    <td>{{ row[10] }}</td>
+                    <td>{{ row[11] }}</td>
+                    <td>{{ row[12] }}</td> 
+                    <td>{{ row[13] }}</td> 
+                    <td>{{ row[14] }}</td> 
+                    <td>
+                        <form action="{{ url_for('delete_data', id=row[0]) }}" method="post">
+                            <button type="submit" class="delete-button red-button">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <!-- Container for the download button -->
+        <div class="button-container">
+            <a href="{{ url_for('download_csv') }}">
+                <button class="download-button green-button">Download CSV</button>
+            </a>
+            <a href="{{ url_for('download_fraud_csv') }}">
+                <button class="download-button green-button">Download Fraud Data</button>
+            </a>
+        </div>
+    </div>
+</div>
+</section>
+{% include "footer2.html" %}
+{% endblock %}
+

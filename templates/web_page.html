@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Predict Page{% endblock %}
+
+{% block content %}
+{% include "header2.html" %}
+
+<div class="webpage-page">
+
+<div class="container-webpage">
+    
+
+    <!-- Fraud Detection Form -->
+    <h1>Fraud Detection Form</h1>
+    <form method="post" action="{{ url_for('predict') }}">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.date.label }}<br>
+            {{ form.date() }}<br>
+            {% for error in form.date.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.account_id.label }}<br>
+            {{ form.account_id() }}<br>
+            {% for error in form.account_id.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.day.label }}<br>
+            <select name="day" id="day">
+                {% for day in days_of_week %}
+                    <option value="{{ day }}">{{ day }}</option>
+                {% endfor %}
+            </select><br>
+            {% for error in form.day.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.time.label }}<br>
+            {{ form.time() }}<br>
+            {% for error in form.time.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.card_type.label }}<br>
+            <select name="card_type" id="card_type">
+                {% for card_type in card_types %}
+                    <option value="{{ card_type }}">{{ card_type }}</option>
+                {% endfor %}
+            </select><br>
+            {% for error in form.card_type.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.entry_mode.label }}<br>
+            <select name="entry_mode" id="entry_mode">
+                {% for entry_mode in entry_modes %}
+                    <option value="{{ entry_mode }}">{{ entry_mode }}</option>
+                {% endfor %}
+            </select><br>
+            {% for error in form.entry_mode.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.amount.label }}<br>
+            {{ form.amount() }}<br>
+            {% for error in form.amount.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.transaction_type.label }}<br>
+            <select name="transaction_type" id="transaction_type">
+                {% for transaction_type in transaction_types %}
+                    <option value="{{ transaction_type }}">{{ transaction_type }}</option>
+                {% endfor %}
+            </select><br>
+            {% for error in form.transaction_type.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.merchant_group.label }}<br>
+            <select name="merchant_group" id="merchant_group">
+                {% for merchant_group in merchant_groups %}
+                    <option value="{{ merchant_group }}">{{ merchant_group }}</option>
+                {% endfor %}
+            </select><br>
+            {% for error in form.merchant_group.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.country.label }}<br>
+            <select name="country" id="country">
+                {% for country in countries %}
+                    <option value="{{ country }}">{{ country }}</option>
+                {% endfor %}
+            </select><br>
+            {% for error in form.country.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.residence.label }}<br>
+            <select name="residence" id="residence">
+                {% for residence in residences %}
+                    <option value="{{ residence }}">{{ residence }}</option>
+                {% endfor %}
+            </select><br>
+            {% for error in form.residence.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <p>
+            {{ form.bank.label }}<br>
+            <select name="bank" id="bank">
+                {% for bank in banks %}
+                    <option value="{{ bank }}">{{ bank }}</option>
+                {% endfor %}
+            </select><br>
+            {% for error in form.bank.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        <div class="button-container">
+            <p><input type="submit" class="button-common" value="Submit"></p>
+        </div>
+        
+    </form>
+    </div>
+</div>
+
+{% include "footer2.html" %}
+{% endblock %}

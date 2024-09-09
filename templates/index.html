@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+{% include "header.html" %}
+
+<!-- Welcome Section with Background Image -->
+<div class="welcome-section">
+    <div class="welcome-text">
+        <h1>Credit Card Fraud Detection System</h1>
+        <p>Advanced solutions to protect your financial transactions from fraud.</p>
+        <a href="{{ url_for('login_page') }}" class="button-link">Explore Now</a>
+    </div>
+</div>
+
+<!-- Info Sections -->
+<div class="info-sections">
+    <div class="info-box">
+        <img src="/static/images/bg7.png" alt="Enhanced Insights Image">
+        <h2>Enhanced Insights</h2>
+        <p>Gain detailed analytics and reports on fraudulent activities for informed decision-making.</p>
+    </div>
+    <div class="info-box">
+        <img src="/static/images/bg3.jpg" alt="Seamless Integration Image">
+        <h2>Seamless Integration</h2>
+        <p>Easily integrate our fraud detection system with your existing infrastructure and workflows.</p>
+    </div>
+    <div class="info-box">
+        <img src="/static/images/bg5.jpg" alt="Hidden Pattern Discovery Image">
+        <h2>Hidden Pattern Discovery</h2>
+        <p>Uncover hidden fraud patterns with cutting-edge machine learning techniques.</p>
+    </div>
+</div>
+
+
+
+{% include "footer.html" %}
+{% endblock %}

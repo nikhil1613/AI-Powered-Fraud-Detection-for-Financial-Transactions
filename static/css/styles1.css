@@ -1,0 +1,974 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    width: 100%; /* Ensure header spans full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2); /* Optional: semi-transparent background for readability */
+    
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    width: 100%; /* Ensure header spans full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    
+}
+
+/* Logo styling */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.big-x {
+    font-size: 44px;
+    vertical-align: bottom;
+    color: #0d1014;
+    line-height: 0.75;
+}
+
+/* Navigation links centered styling */
+.nav-links-center {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-link:hover {
+    color:  #11979a;
+    border-bottom: 2px solid #11979a;
+}
+
+/* Auth buttons on the right */
+.auth-buttons-right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.button-link {
+    text-decoration: none;
+    color:  #11979a;
+    background-color: #080808;
+    padding: 10px 20px;
+    border: 2px solid  #11979a;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #11979a;
+    color: #fff;
+}
+
+
+/* Welcome Section */
+.welcome-section {
+    background-image: url('/static/images/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Set a fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove default margin */
+    color: white;
+    
+}
+
+.welcome-text {
+    /*background-color: rgba(0, 0, 0, 0.5);*//* Optional: Add a semi-transparent background to improve text readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    
+    
+}
+
+.welcome-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.welcome-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.button-link {
+    text-decoration: none;
+    color: #11979a;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 2px solid #11979a;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button-link:hover {
+    background-color: #11979a;
+    color: #fff;
+}
+
+/* Info Sections */
+.info-sections {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0; /* Adjust padding to remove extra space */
+    width: 100%; /* Ensure section spans full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    gap: 20px; /* Add gap between info boxes */
+}
+
+.info-box {
+    text-align: center;
+    max-width: 350px;
+    margin: 0; /* Remove margin to ensure no gap */
+    background-color: #f4f4f4; /* Add background color for box-like styling */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for box effect */
+    transition: transform 0.3s; /* Add transition for hover effect */
+    overflow: hidden; /* Ensure no overflow from images */
+}
+
+.info-box:hover {
+    transform: translateY(-10px); /* Move box upwards on hover */
+}
+
+.info-box img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.info-box h2 {
+    font-size: 24px;
+    margin: 10px 0; /* Adjust margins */
+    padding: 10px; /* Add padding   333/ccc*/
+    
+}
+
+.new-section {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    justify-items: left;
+    font-size: 18px;
+}
+
+.info-section h2 {
+    margin-top: 0;
+    color:#fff;
+}
+
+
+
+.contact-us {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.contact-us h2 {
+    margin-top: 0;
+    color:#fff;
+}
+
+
+
+.footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    text-align: center; /* Center text alignment */
+    padding: 20px 0;  /*Padding for top and bottom */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    position: relative;
+     /* Add space above the footer if needed */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Ensure footer text is centered */
+.footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+.footer2 {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text color */
+    text-align: center; /* Center text alignment */
+    padding: 20px 0;  /*Padding for top and bottom */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+    position: relative;
+     /* Add space above the footer if needed */
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.footer2 p {
+    margin: 0; /* Remove default margin */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold;
+}
+
+/* for about us and vision page below */
+.page-header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 4em;
+    margin: 0;
+}
+
+.page-header p {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.outer-box-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.outer-box {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 50%;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.outer-box h2 {
+    font-size: 42px;
+    margin: 0 0 20px 0;
+}
+
+.inner-box {
+    background-color: #f0f0f0;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: justify;
+}
+
+.inner-box p {
+    font-size: 1.5em;
+    margin: 0;
+    margin-top: 20px;
+}
+/* for about us and vision page above */
+/*photos section*/
+.team-section {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #ccc;
+}
+
+.team-section h2 {
+    margin-bottom: 40px; /* Adjust this value as needed */
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    width: 150px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+.team-member p {
+    font-size: 1.1em;
+    margin: 0;
+    font-weight:800;
+}
+
+/*fraud detection-> increasing box-width*/
+.outer-box1 {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 90%; /* Increase max-width to allow more content */
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+.outer-box1 h2{
+    font-size: 42px;
+}
+
+/*fraud detection*/
+.section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image {
+    width: 45%;
+    height: auto;
+}
+
+.text-content {
+    width: 50%;
+    padding: 20px;
+    
+}
+
+.text-content h2 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.analysis-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.analysis-section h2 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.center-image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.center-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.scores {
+    font-family: monospace;
+    white-space: pre;
+    background: #f9f9f9;
+    border: 5px solid #ccc;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Login page below */
+/* login Page Background */
+.login-page {
+    background-image: url('../images/LOGIN.jpg'); /* Ensure this is the correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background fixed */
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    align-items: center; /* Center vertically */
+    padding: 30px 95px;
+    position: relative;
+    overflow: hidden; /* Ensure the background doesn't move */
+}
+
+/* Form Container Styles */
+.form-container {
+    background: rgba(255, 255, 255, 0.25); /* Light white background with slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px; /* Adjust as needed */
+    width: 100%; /* Make it responsive */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    margin: auto; /* Center horizontally */
+    max-height: calc(100vh - 60px); /* Ensure it doesn't exceed viewport height, accounting for padding */
+    overflow: auto; /* Allow scrolling within the form container if necessary */
+}
+
+/* Outline Box Styles */
+.outline-box {
+    border: 2px solid rgba(68, 230, 248, 0.85); /* Outline color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(68, 230, 248, 0.4); /* Optional shadow to enhance visibility */
+    max-width: 420px; /* Slightly larger to accommodate padding */
+    width: 100%; /* Make it responsive */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-part {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Form Container Styles */
+.form-container h1 {
+    color: rgba(68, 230, 248, 0.85); /* Set text color to white */
+    font-size: 3rem; /* Adjust the size as needed */
+    text-align: center; /* Center align the text */
+    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+    font-weight: bold; /* Make the font bold */
+}
+
+/* Form Label Styles */
+.form-container label {
+    color: #f0f0f0; /* Light gray color for better visibility on a white background */
+    font-size: 1.2rem; /* Larger font size for better readability */
+    display: block; /* Ensure labels are on their own line */
+    margin-bottom: 0px; /* Space between label and input */
+}
+/* Form Input Styles */
+.form-container input {
+    background: rgba(255, 255, 255, 0.85); /* Light white background with slight transparency */
+    border: 1px solid #ccc; /* Light border for better visibility */
+    padding: 10px; /* Add some padding inside the input box */
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 20px); /* Full width minus padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-size: 16px; /* Font size */
+    margin-bottom: 10px; /* Space between fields */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Focus and Hover Effects for Input Fields */
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus {
+    border-color: rgba(68, 230, 248, 0.85); /* Highlight border on focus */
+    box-shadow: 0 0 8px rgba(68, 230, 248, 0.75); /* Glowing effect */
+}
+
+/* Submit Button Styles */
+.form-container input[type="submit"] {
+    background-color: transparent; /* Button color */
+    border: none; /* Remove default border */
+    color: rgba(68, 230, 248, 0.85); /* Text color */
+    padding: 10px; /* Match padding to input fields */
+    border: 2px solid rgba(68, 230, 248, 0.85);
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 20px); /* Full width minus padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Glow Effect on Submit Button */
+.form-container input[type="submit"]:focus,
+.form-container input[type="submit"]:hover {
+    background-color: rgba(68, 230, 248, 1); /* Darker color on hover */
+    color: #fff;
+}
+
+/* Button Link Styles */
+.button-link-login {
+    display: inline-block;
+    text-align: center;
+    background-color: transparent; /* Button color */
+    color: rgba(68, 230, 248, 0.85); /* Text color */
+    padding: 10px 20px; /* Match padding to submit button */
+    border: 2px solid rgba(68, 230, 248, 0.85);
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    width: calc(100% - 20px); /* Full width minus padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin-top: 10px; /* Add some space above the button */
+}
+
+/* Glow Effect on Button Link */
+.button-link-login:hover,
+.button-link-login:focus {
+    background-color: rgba(68, 230, 248, 1); /* Darker color on hover */
+    color: #fff; 
+}
+
+/* Login page above */
+
+/* Register page below */
+/* Register Page Background */
+.register-page {
+    background-image: url('../images/REGISTER1.jpg'); /* Ensure this is the correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keep the background fixed */
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /* Center vertically */
+    padding: 30px 180px;
+    position: relative;
+    overflow: hidden; /* Ensure the background doesn't move */
+}
+
+/* Form Container Styles for Register Page */
+.form-container-register {
+    background: rgba(255, 255, 255, 0.25); /* Light white background with slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px; /* Adjust as needed */
+    width: 100%; /* Make it responsive */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    margin: auto; /* Center horizontally */
+    max-height: calc(100vh - 60px); /* Ensure it doesn't exceed viewport height */
+    overflow: auto; /* Allow scrolling within the form container if necessary */
+}
+
+/* Outline Box Styles for Register Page */
+.outline-box-register {
+    border: 2px solid rgba(68, 230, 248, 0.85); /* Outline color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(68, 230, 248, 0.4); /* Optional shadow to enhance visibility */
+    max-width: 420px; /* Slightly larger to accommodate padding */
+    width: 100%; /* Make it responsive */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Allow scrolling within the box */
+}
+
+/* Heading Styles for Register Page */
+.form-container-register h1 {
+    color: rgba(68, 230, 248, 0.85); /* Set text color to white */
+    font-size: 3rem; /* Adjust the size as needed */
+    text-align: center; /* Center align the text */
+    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+    font-weight: bold; /* Make the font bold */
+}
+
+/* Form Label Styles for Register Page */
+.form-container-register label {
+    color: #f0f0f0; /* Light gray color for better visibility on a white background */
+    font-size: 1.2rem; /* Larger font size for better readability */
+    display: block; /* Ensure labels are on their own line */
+    margin-bottom: 0px; /* Space between label and input */
+}
+
+/* Form Input Styles for Register Page */
+.form-container-register input {
+    background: rgba(255, 255, 255, 0.85); /* Light white background with slight transparency */
+    border: 1px solid #ccc; /* Light border for better visibility */
+    padding: 7px; /* Add some padding inside the input box */
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 20px); /* Full width minus padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-size: 16px; /* Font size */
+    margin-bottom: 5px; /* Space between fields */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Focus and Hover Effects for Input Fields */
+.form-container-register input[type="email"]:focus,
+.form-container-register input[type="password"]:focus,
+.form-container-register input[type="text"]:focus {
+    border-color: rgba(68, 230, 248, 0.85); /* Highlight border on focus */
+    box-shadow: 0 0 8px rgba(68, 230, 248, 0.75); /* Glowing effect */
+}
+
+/* Submit Button Styles for Register Page */
+.form-container-register input[type="submit"] {
+    background-color: transparent; /* Button color */
+    border: none; /* Remove default border */
+    color: rgba(68, 230, 248, 0.85); /* Text color */
+    padding: 10px; /* Match padding to input fields */
+    border: 2px solid rgba(68, 230, 248, 0.85);
+    border-radius: 5px; /* Rounded corners */
+    width: calc(100% - 20px); /* Full width minus padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Glow Effect on Submit Button for Register Page */
+.form-container-register input[type="submit"]:focus,
+.form-container-register input[type="submit"]:hover {
+    background-color: rgba(68, 230, 248, 1); /* Darker color on hover */
+    color: #fff; /* Glowing effect */
+}
+
+.button-link-register {
+    display: inline-block;
+    text-align: center;
+    background-color: transparent; /* Button color */
+    color: rgba(68, 230, 248, 0.85); /* Text color */
+    padding: 10px 20px; /* Match padding to submit button */
+    border: 2px solid rgba(68, 230, 248, 0.85);
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    width: calc(100% - 20px); /* Full width minus padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin-top: 10px; /* Add some space above the button */
+}
+
+/* Glow Effect on Button Link for Register Page */
+.button-link-register:hover,
+.button-link-register:focus {
+    background-color: rgba(68, 230, 248, 1); /* Darker color on hover */
+    color: #fff;
+}
+
+/* Register page above */
+
+/*web-page*/
+
+
+/*webpage*/
+/* Center the container-webpage and make it look attractive */
+.webpage-page {
+    background-image: url('../images/input1.jpg'); /* Ensure this is the correct path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center center; /* Centers the image */
+    background-attachment: fixed; /* Fixes the background image in place */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding: 0;
+    margin: 0;
+    min-height: 100vh; /* Ensures the minimum height covers the full viewport */
+    display: flex; /* Centers content vertically and horizontally */
+    align-items: center;
+    justify-content: center;
+}
+
+.container-webpage {
+    background: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background: rgba(255, 255, 255, 0.4); /* White background with 80% opacity */
+    padding: 20px; /* Space inside the container */
+    width: 100%;
+    max-width: 600px; /* Maximum width for the form */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 30px 0; /* Adds space at the top and bottom */
+}
+
+h1 {
+    text-align: center;
+    color: #f3ebeb; /* Dark text color for better readability */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+form select {
+    background: rgba(255, 255, 255, 0.9); /* White background with 80% opacity */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Slightly transparent border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 8px; /* Padding inside the select box */
+    font-size: 16px; /* Font size for the options */
+    color: #000; /* Text color */
+    width: 100%; /* Make select box full width */
+    max-width: 600px; /* Set a maximum width */
+    margin: 0 auto; /* Center align the select box */
+    display: block; /* Ensure block display for centering */
+}
+
+form p {
+    margin-bottom: 15px; /* Space below each form field */
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px; /* Space below label */
+    font-weight: bold; /* Make label text bold */
+    color: #ffffff; /* Set text color to white */
+}
+
+form input, form select, form textarea {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Space inside the input fields */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 4px; /* Slightly rounded corners for input fields */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background: rgb(244, 239, 239,0.8); /* White background with 80% opacity */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Slightly transparent border */
+}
+
+/* Common class for buttons */
+/* Common button styles */
+.button-common {
+    background-color: #059ba0; /* Transparent background initially */
+    color: #fff; /* Border color and text color */
+    border: 2px solid #059ba0; /* Border with the same color as text */
+    padding: 10px 15px; /* Space inside the button */
+    border-radius:4px; /* Slightly rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 20px; /* Increase font size */
+    font-weight: bold;
+    text-align: center; /* Center the text */
+    display: block; /* Ensure block display for centering */
+    text-decoration: none; /* Remove underline from the anchor element */
+    width: 200px; /* Fixed width for consistency */
+    margin: 10px auto; /* Center the button horizontally with spacing */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    
+}
+
+.button-container {
+    text-align: center; /* Center-align the button container */
+}
+
+span {
+    color: red; /* Red color for error messages */
+    font-size: 14px; /* Smaller font size for error messages */
+}
+/*web_page end*/
+
+/* Base styling for the result page container */
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85.7vh; /* Full viewport height */
+    background-size: 100% 100%;
+    
+    background-position: center;
+    
+}
+
+.fraud-bg {
+    background-image: url('../images/res2.jpg'); 
+}
+
+.non-fraud-bg {
+    background-image: url('../images/bg11.jpg'); 
+}
+
+.container-result {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgba(249, 249, 249, 0.8); /* Translucent background color */
+    /*backdrop-filter: blur(10px);  Optional: blur effect for better translucency */
+}
+
+.container-result h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.result {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.result p {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container-result a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color:  #059ba0;
+    background-color: transparent;
+    border: 2px solid  #059ba0;
+}
+
+.container-result a:hover {
+    background-color: #059ba0;
+    color: #fff;
+}
+
+/*show data*/
+h2 {
+    text-align: center;
+    color: #131313; /* Dark text color for better readability */
+    margin-bottom: 20px; /* Space below the heading */
+}
+/* General button styling */
+button {
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Green button styling */
+.green-button {
+    background-color: #2ecc71; /* Green color */
+}
+
+/* Red button styling */
+.red-button {
+    background-color: #e74c3c; /* Red color */
+}
+
+/* Center-align the download button below the table */
+.f-container {
+    display: flex;
+    flex-direction: column;
+    height: 76.2%;
+    padding-bottom: 20px;
+}
+
+.button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Add some space above the button */
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table thead {
+    background-color: #f2f2f2;
+}
+
+/* Highlight row with light red color */
+.highlight {
+    background-color: #ffcccc; /* Light red color */
+}
+
+/*analysis page*/
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive-16by9 {
+    padding-top: 56.25%;
+}
+
+.embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+

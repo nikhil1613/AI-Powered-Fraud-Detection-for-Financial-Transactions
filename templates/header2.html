@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <header class="header2">
+        <div class="logo">
+            Fraud<span class="big-x">X</span>
+        </div>
+        <nav class="nav-links-center">
+            <a href="{{ url_for('web_page') }}" class="nav-link">Prediction</a>
+            <a href="{{ url_for('show_data') }}" class="nav-link">Transaction History</a>
+            <a href="{{ url_for('analysis') }}" class="nav-link">Analysis</a>
+
+        </nav>
+        
+        <div class="auth-buttons-right">
+            <a href="{{ url_for('logout') }}" class="button-link">Logout</a>
+        </div>
+        </div>
+    </header>
+    
+</div>
+{% endblock %}

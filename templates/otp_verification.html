@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}OTP Verification{% endblock %}
+{% block content %}
+<div class="login-page">
+    <div class="right-part">
+        <div class="outline-box">
+            <div class="form-container">
+                <h1>OTP Verification</h1>
+
+                <form method="post" action="{{ url_for('otp_verification') }}">
+                    {{ form.hidden_tag() }}
+                    <p>
+                        <label for="email">{{ form.email.label }}</label><br>
+                        <input type="email" id="email" name="email" size="30" required value="{{ session.get('email', '') }}" readonly>
+                    </p>
+                    <p>
+                        <label for="otp">{{ form.otp.label }}</label><br>
+                        {{ form.otp(size=30, required=True) }}
+                    </p>
+                    {{ form.submit(class="btn btn-primary") }}
+                    <a href="{{ url_for('home') }}" class="button-link-login">Home</a>
+                </form>
+
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul>
+                        {% for message in messages %}
+                            <li style="color: red;">{{ message }}</li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

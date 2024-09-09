@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Result Page{% endblock %}
+
+{% block content %}
+{% include "header2.html" %}
+<div class="page-wrapper {% if prediction == 1 %}fraud-bg{% else %}non-fraud-bg{% endif %}">
+<div class="container-result">
+    <h2>Prediction Result</h2>
+    <div class="result">
+        {% if prediction == 1 %}
+            <p style="color: red;">Prediction: Fraudulent Transaction Detected</p>
+        {% elif prediction == 0 %}
+            <p style="color: green;">Prediction: Not a Fraudulent Transaction</p>
+        {% else %}
+            <p style="color: green;">error</p>
+        {% endif %}
+    
+</div>
+{% endblock %}
+

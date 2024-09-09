@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Fraud Detection{% endblock %}
+{% block content %}
+{% include "header.html" %}
+<!-- Page Header -->
+<header class="page-header" style="background-image: url('../static/images/fdetect.jpg');">
+    <h1>Fraud Detection</h1>
+    <p>Credit Card Fraud Detection: Ensuring Financial Security</p>
+</header>
+
+<!-- Outer Box Section -->
+<section class="outer-box-section">
+    <div class="outer-box1">
+        <!-- Our Mission Header -->
+        <h2>Insights on the project</h2>
+        <p>
+            <!-- Content for insights on the project -->
+        </p>
+    
+
+<!-- New Section 1 -->
+<section class="section">
+    <div class="content">
+        <img src="../static/images/fraud1.jpg" alt="Credit Card Fraud Detection" class="image">
+        <div class="text-content">
+            <h2>About Credit Card Fraud Detection System</h2>
+            <p>
+                Credit Card Fraud Detection with Machine Learning is a process of data investigation by a Data Science team and the development of a model that will provide the best results in revealing and preventing fraudulent transactions. This is achieved through bringing together all meaningful features of card users' transactions, such as Date, User Zone, Product Category, Amount, Provider, Client’s Behavioral Patterns, etc. The information is then run through a subtly trained model that finds patterns and rules so that it can classify whether a transaction is fraudulent or is legitimate.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- New Section 2 -->
+<section class="section reverse">
+    <div class="content">
+        <div class="text-content">
+            <h2>Random Forest Algorithm</h2>
+            <p>
+                Random Forest is a powerful machine learning algorithm used in our credit card fraud detection model. It creates multiple decision trees from random subsets of the data and averages their predictions, reducing the risk of overfitting. This method effectively handles the imbalanced nature of fraud detection, focusing on both fraudulent and legitimate transactions.
+
+By analyzing feature importance, Random Forest identifies key attributes that distinguish fraud, such as transaction time, amount, and location. Its robustness and stability make it ideal for real-world data, ensuring high accuracy and reliability in detecting fraudulent activities.            </p>
+        </div>
+        <img src="../static/images/fraud2.png" alt="Another Section Image" class="image">
+    </div>
+</section>
+
+
+<section class="analysis-section">
+    <h2>Model Performance</h2> <br>
+    <div class="center-image">
+        <img src="../static/images/fraud3.png" alt="Dataset Analysis Image">
+    </div> <br><br>
+    <div class="scores">
+        <pre>
+                Precision    Recall  F1-score   Support
+
+        0       0.99      0.98      0.98     18538
+        1       0.98      0.99      0.98     18576
+
+ Accuracy                           0.98     37114
+        </pre>
+    </div>
+</section>
+</div>
+</section>
+
+{% include "footer.html" %}
+{% endblock %}

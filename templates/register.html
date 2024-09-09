@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+{% block content %}
+<div class="register-page">
+    <div class="right-part">
+        <div class="outline-box-register">
+            <div class="form-container-register">
+                <!-- {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for msg in messages %}
+                        <p>{{ msg }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %} -->
+                <h1>Registration</h1>
+                
+                <form method="post" action="{{ url_for('register_page') }}">
+                    {{ form.csrf_token }}
+                    <p>
+                        {{ form.email.label }} <br>{{ form.email(size=30, required=True) }}
+                        {% for err in form.email.errors %}
+                        <span style="color: red;">{{ err }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.name.label }} <br>{{ form.name(size=30, required=True) }}
+                        {% for err in form.name.errors %}
+                        <span style="color: red;">{{ err }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.password.label }} <br>{{ form.password(size=30, required=True) }}
+                        {% for err in form.password.errors %}
+                        <span style="color: red;">{{ err }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.re_password.label }} <br>{{ form.re_password(size=30, required=True) }}
+                        {% for err in form.re_password.errors %}
+                        <span style="color: red;">{{ err }}</span>
+                        {% endfor %}
+                    </p>
+                    {{ form.submit }}
+                    <a href="{{ url_for('home') }}" class="button-link-register">Home</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+{% block content %}
+<div class="login-page">
+    <div class="right-part">
+        <div class="outline-box">
+            <div class="form-container">
+                <h1>Login</h1>
+                
+                <form method="post" action="{{ url_for('login_page') }}">
+                    {{ form.csrf_token }}
+                    <p>
+                        {{ form.email.label }} <br>{{ form.email(size=30, required=True) }}
+                        {% for err in form.email.errors %}
+                        <span style="color: red;">{{ err }}</span>
+                        {% endfor %}
+                    </p>
+                    <p>
+                        {{ form.password.label }} <br>{{ form.password(size=30, required=True) }}
+                        {% for err in form.password.errors %}
+                        <span style="color: red;">{{ err }}</span>
+                        {% endfor %}
+                    </p>
+                    {{ form.submit }}
+                    <a href="{{ url_for('home') }}" class="button-link-login">Home</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
